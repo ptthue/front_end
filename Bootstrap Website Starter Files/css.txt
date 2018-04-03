@@ -1,0 +1,1 @@
+min-height: là chiều cao tối thiểu của 1 phần tử, điều này ngăn không cho giá trị của thuộc tính chiều cao trở nên nhỏ hơn chiều cao tối thiểu.

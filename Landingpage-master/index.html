@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landingpage-Master</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<style type="text/css">
+  		body{
+  			font-family: 'Open Sans', sans-serif;
+  		}
+  		p{
+  			font-size: 15px;
+  			line-height: 21px;
+  		}
+  		h1, h2, h3, h4{
+  			font-family: 'PT Sans Narrow', Arial, sans-serif;
+  			font-weight: 700;
+  			text-transform: uppercase;
+  		}
+  		.navbar{
+  			font-family: 'PT Sans Narrow', Arial, sans-serif;
+  			font-weight: 700;
+  			border-bottom: 1px solid #fff;
+  		}
+  		.header{
+  			background-position: center center;
+  			/* position: relative; */
+  			height: 600px;
+  			background-image: url(images/bg3.jpg);
+  			width: 100%;
+  			padding: 30px 0 30px;
+  			margin-top: 50px;
+  			color: #fff;
+  		}
+  		.header h1{
+  			font-family: 'PT Sans Narrow', Arial, sans-serif;
+  			text-transform: uppercase;
+  			font-size: 40px;
+  			font-weight: 700;
+  			padding-top: 30px;
+  		}
+  		.header p{
+  			margin-top: 20px;
+  		}
+  		.header .btn{
+  			margin: 40px 20px;
+  			border-radius: 0;
+  		}
+  		.header .btn:hover{
+  			background: #ededed;
+  			border: 1px solid #fff;
+  			color: #000;
+  		}
+  		.header img{
+  			height: 350px;
+  			width: 450px;
+  			margin: 70px 0 0 40px;
+  		}
+  		.sevices{
+  			padding: 80px 0 80px;
+  		}
+  		.sevices h2{
+  			margin:20px 0;
+  			color: #4c4c4c;
+  		}
+  		.sevices p{
+  			padding-bottom: 40px;
+  			color: #737373;
+  			font-size: 14px;
+  		}
+  		.sevices i{
+  			width: 80px;
+  			height: 80px;
+  			color: #fff;
+  			background: #6699cc;
+  			border-radius: 50%;
+  			font-size: 30px;
+  			padding: 25px 20px;
+  		}
+  		.pricing, .trustedby{
+  			background: #3399ff;
+  			color: #fff;
+  			padding: 50px 0 80px;
+  		}
+  		.pricing h2{
+  			margin: 20px 0;
+  		}
+  		.pricing .packages{
+  			background: #fff;
+  			color: #4c4c4c;
+  			padding: 30px;
+  			border-radius: 5px;
+  			margin-top: 30px;
+  			border:1px solid #ccc;
+  		}
+  		.packages>p{
+  			padding-bottom: 50px;
+  		}
+  		.packages li{
+  			list-style: none;
+  			font-size: 15px;
+  			color: #737373;
+  			padding: 5px;
+  		}
+  		.packages button{
+  			margin-top: 10px;
+  		}
+  		.team, .contact{
+  			padding: 50px 0 50px;
+  		}
+  		.team h2{
+  			margin: 20px 0;
+  		}
+  		.team img{
+  			height: 150px;
+  			width: 150px;
+  			margin-top: 80px;
+  			border-radius: 50%;
+  		}
+  		.team h4{
+  			margin: 20px 0 20px;
+  			color: #4c4c4c;
+  		}
+  		.team a i{
+  			color: #fff;
+  			height: 30px;
+  			width: 30px;
+  			padding: 5px;
+  			font-size: 17px;
+  			border-radius: 50%;
+  			background: #a0db8e;
+  		}
+  		.team p{
+  			color: #737373;
+  		}
+  		.trustedby img{
+			width: 200px;
+			margin-top: 80px;
+			opacity: 0.7;
+  		}
+  		.trustedby img:hover{
+  			opacity: 1;
+  		}
+  		.contact p{
+  			margin-bottom: 80px;
+  		}
+  		.contact .input-group{
+  			margin-bottom: 25px;
+  		}
+  		.contact .form-control, .contact span{
+			border-radius: 0 !important;
+  		}
+  		.contact .btn{
+  			width: 100%;
+  			font-size: 15px;
+  			border-radius: 0;
+  		}
+  		footer{
+  			background: #000;
+  			color: #ccc;
+  			padding: 50px 0;
+  		}
+  		footer i{
+  			padding-right: 5px;
+  		}
+  		footer .social{
+  			font-size: 20px;
+  			width: 30px;
+  			height: 30px;
+  			padding: 5px;
+  			border: 1px solid #ccc;
+  			margin-right: 5px;
+  			margin-bottom: 10px;
+  			text-align: center;
+  		}
+  		footer input{
+  			height: 40px;
+  			width: 160px;
+  			padding: 5px;
+  			border: none;
+  			background: #ccc;
+  			color: #000;
+  		}
+  		footer .btn{
+  			padding: 10px 5px 10px;
+  			margin: -3px 0 0 5px;
+
+  		}
+  		/* @media(max-width:768px) {
+  		    		.header {
+  		        
+  		        		padding: 30px;
+  		        		height: 750px;
+  		    		}
+  		    
+  		    		.header img {
+  		        
+  		        		width: 90%;
+  		        		height: 300px;
+  		        		margin: 20px 0 0 20px;
+  		    		}
+  		    
+  		    		.header .btn {
+  		        
+  		        		font-size: 10px;
+  		        		margin-left: 20px;
+  		    		}
+  		    
+  		    		.header h1 {
+  		        
+  		        		font-size: 20px;
+  		    		}
+  		    
+  		    		.header p {
+  		        
+  		        		font-size: 10px;
+  		    		}
+  				}
+  		@media(max-width:768px) {
+  		    
+  		    		.services {
+  		        
+  		        		padding: 30px;
+  		    		}
+  				} */
+  	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="" class="navbar-brand">MEDIA</a>
+			</div>
+			<div class="navbar-collapse" id="menu">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">HOME</a></li>
+					<li><a href="">SERVICES</a></li>
+					<li><a href="">PRICING</a></li>
+					<li><a href="">TEAMS</a></li>
+					<li><a href="">CLIENTS</a></li>
+					<li><a href="">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="header">
+		<div class="container">
+			<div class="row little">
+				<div class="col-md-6">
+					<h1>Responsive Web Design</h1>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+					<button type="button" class="btn btn-lg btn-primary">BUY NOW</button>
+					<button type="button" class="btn btn-lg btn-success">VIEW DETAIL</button>
+				</div>
+				<div class="col-md-6">
+					<img src="images/Responsive-Web-Design.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sevices text-center container">
+		<h2>SERVICES</h2>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesettin dummy text</p>
+		<div class="row">
+			<div class="col-md-3">
+				<i class="fa fa-desktop"></i>
+				<h3>web design</h3>
+				<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+			</div>
+			<div class="col-md-3">
+				<i class="fa fa-mobile"></i>
+				<h3>Mobile Apps</h3>
+				<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+			</div>
+			<div class="col-md-3">
+				<i class="fa fa-database"></i>
+				<h3>Database</h3>
+				<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+			</div>
+			<div class="col-md-3">
+				<i class="fa fa-bank"></i>
+				<h3>Consulting</h3>
+				<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="pricing">
+		<div class="container text-center">
+			<h2>PRICING</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesettin dummy text</p>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="packages">
+						<h4>BRONZE</h4>
+						<h1>9.99</h1>
+						<b>Monthly</b>
+						<p>Lorem Ipsum passages, and more recently with desktop</p>
+						<hr>
+						<li>100 Users</li>
+						<li>SSL Certificate</li>
+						<li>Online Support</li>
+						<li>300GB Disckspace</li>
+						<li>100 Email Address</li>
+						<li>MySQL Database</li>
+						<button class="btn btn-success">GET STARTED</button>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="packages">
+						<h4>SILVER</h4>
+						<h1>9.99</h1>
+						<b>Monthly</b>
+						<p>Lorem Ipsum passages, and more recently with desktop</p>
+						<hr>
+						<li>100 Users</li>
+						<li>SSL Certificate</li>
+						<li>Online Support</li>
+						<li>300GB Disckspace</li>
+						<li>100 Email Address</li>
+						<li>MySQL Database</li>
+						<button class="btn btn-success">GET STARTED</button>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="packages">
+						<h4>GOLD</h4>
+						<h1>9.99</h1>
+						<b>Monthly</b>
+						<p>Lorem Ipsum passages, and more recently with desktop</p>
+						<hr>
+						<li>100 Users</li>
+						<li>SSL Certificate</li>
+						<li>Online Support</li>
+						<li>300GB Disckspace</li>
+						<li>100 Email Address</li>
+						<li>MySQL Database</li>
+						<button class="btn btn-success">GET STARTED</button>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="packages">
+						<h4>PREMIUM</h4>
+						<h1>9.99</h1>
+						<b>Monthly</b>
+						<p>Lorem Ipsum passages, and more recently with desktop</p>
+						<hr>
+						<li>100 Users</li>
+						<li>SSL Certificate</li>
+						<li>Online Support</li>
+						<li>300GB Disckspace</li>
+						<li>100 Email Address</li>
+						<li>MySQL Database</li>
+						<button class="btn btn-success">GET STARTED</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!--END PRICING-->
+
+	<div class="team container text-center">
+		<h2>MEET OUR TEAM</h2>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesettin dummy text</p>
+		<div class="row">
+			<div class="col-md-3">
+				<img src="images/team/team-1.jpg">
+				<h4>JOHN DOE</h4>
+				<b>CEO and Founder</b>
+				<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-twitter"></i></a>
+				<a href=""><i class="fa fa-linkedin"></i></a>
+				<a href=""><i class="fa fa-pinterest"></i></a>
+			</div>
+			<div class="col-md-3">
+				<img src="images/team/team-2.jpg">
+				<h4>JOHN DOE</h4>
+				<b>CEO and Founder</b>
+				<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-twitter"></i></a>
+				<a href=""><i class="fa fa-linkedin"></i></a>
+				<a href=""><i class="fa fa-pinterest"></i></a>
+			</div>
+			<div class="col-md-3">
+				<img src="images/team/team-3.jpg">
+				<h4>JOHN DOE</h4>
+				<b>CEO and Founder</b>
+				<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-twitter"></i></a>
+				<a href=""><i class="fa fa-linkedin"></i></a>
+				<a href=""><i class="fa fa-pinterest"></i></a>
+			</div>
+			<div class="col-md-3">
+				<img src="images/team/team-4.jpg">
+				<h4>JOHN DOE</h4>
+				<b>CEO and Founder</b>
+				<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-twitter"></i></a>
+				<a href=""><i class="fa fa-linkedin"></i></a>
+				<a href=""><i class="fa fa-pinterest"></i></a>
+			</div>
+		</div>
+	</div><!--END TEAM-->
+
+	<div class="trustedby">
+		<div class="container text-center">
+			<h2>TRUSTED BY</h2>
+			<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+			<div class="col-md-3">
+				<img src="images/clients/client1.png">
+			</div>
+			<div class="col-md-3">
+				<img src="images/clients/client2.png">
+			</div>
+			<div class="col-md-3">
+				<img src="images/clients/client3.png">
+			</div>
+			<div class="col-md-3">
+				<img src="images/clients/client4.png">
+			</div>
+		</div>		
+	</div><!--END TRUSTEDBY-->
+
+	<div class="container text-center contact">
+		<h2>CONTACT</h2>
+		<p>Lorem Ipsum passages, and more recently with desktop publishing software</p>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="input-group input-group-lg input">
+					<span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+  					<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group input-group-lg input">
+					<span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+  					<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group input-group-lg input">
+					<span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone"></i></span>
+  					<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="input-group">
+					<textarea class="form-control" rows="6" cols="80"></textarea>
+				</div>
+				<br>
+				<button class="btn btn-lg btn-danger">SUBMIT YOUR MESSAGE</button>
+			</div>
+		</div>
+	</div><!--END CONTACT-->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h4>CONTACT US</h4>
+					<p><i class="fa fa-home"></i>111 Main Street, Washington DC, 22222</p>
+					<p><i class="fa fa-envelope"></i>info@media.com</p>
+					<p><i class="fa fa-phone"></i>+1 222 222 2222</p>
+					<p><i class="fa fa-globe"></i>www.media.com</p>
+				</div>
+				<div class="col-md-4">
+					<h4>ABOUT</h4>
+					<p><i class="fa fa-square-o">About Us</i></p>
+					<p><i class="fa fa-square-o">Privacy</i></p>
+					<p><i class="fa fa-square-o">Term & Condition</i></p>
+				</div>
+				<div class="col-md-4">
+					<h4>STAY IN TOUCH</h4>
+					<i class="social fa fa-facebook"></i>
+					<i class="social fa fa-twitter"></i>
+					<i class="social fa fa-linkedin"></i>
+					<i class="social fa fa-pinterest"></i>
+					<i class="social fa fa-youtube"></i>
+					<i class="social fa fa-github"></i>
+					<br>
+					<input type="text" name="text" placeholder="Subscribe">
+					<button class="btn btn-success">SUBSCRIBE</button>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
